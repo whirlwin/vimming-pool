@@ -1,9 +1,9 @@
 var koa = require('koa');
 
-var configure = () => {
+var configure = function() {
     var app = koa();
 
-    app.use(function *() {
+    app.use(function*() {
         this.body = 'Welcome to the vimming pool';
     });
 
