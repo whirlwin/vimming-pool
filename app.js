@@ -1,13 +1,7 @@
-var koa = require('koa');
-var app = koa();
+var koaConfig = require('./src/main/config/koa-config');
 
-app.use(function *() {
-    this.body = 'Welcome to the vimming pool';
-});
-
-function start() {
-    app.listen(3000);
-}
+var app = koaConfig.configure();
+var start = () => app.listen(3000);
 
 module.exports = {
     start: start
