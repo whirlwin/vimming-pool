@@ -1,7 +1,7 @@
-var koa = require('koa');
+const koa = require('koa');
 
-var configure = function() {
-    var app = koa();
+const configure = () => {
+    const app = koa();
 
     app.use(function*() {
         this.body = 'Welcome to the vimming pool';
