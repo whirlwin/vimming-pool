@@ -1,4 +1,4 @@
-const koa = require('koa');
+import koa from 'koa';
 
 const configure = () => {
     const app = koa();
@@ -10,6 +10,5 @@ const configure = () => {
     return app;
 }
 
-module.exports = {
-    configure: configure
-};
+export { configure };
+

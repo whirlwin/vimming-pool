@@ -1,3 +1,4 @@
 #!/usr/bin/node
-require('../app.js').start();
+import * as app from '../app.js';
+app.start();
 

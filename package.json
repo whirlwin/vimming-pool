@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run babel-node",
     "dev": "nodemon --exec npm run babel-node",
-    "babel-node": "babel-node --experimental --ignore='' ./bin/www",
+    "babel-node": "babel-node --modules='common' --experimental --ignore='' ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

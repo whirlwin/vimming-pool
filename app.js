@@ -1,8 +1,7 @@
-const koaConfig = require('./src/main/config/koa-config');
+import * as koaConfig from './src/main/config/koa-config';
 
 const app = koaConfig.configure();
 const start = () => app.listen(3000);
 
-module.exports = {
-    start: start
-};
+export { start };
+
