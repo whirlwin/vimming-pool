@@ -1,12 +1,12 @@
+import lodash from 'lodash'
 import koa from 'koa';
+import * as router from './router';
 
 const configure = () => {
+    GLOBAL._ = lodash
     const app = koa();
-
-    app.use(function*() {
-        this.body = 'Welcome to the vimming pool';
-    });
-
+    const r = router.configure();
+    app.use(r.routes());
     return app;
 }
 
